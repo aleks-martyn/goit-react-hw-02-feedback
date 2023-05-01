@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Section } from './Section';
 import { FeedbackOptions } from './FeedbackOptions';
 import { Container } from './App.styled';
 
@@ -12,7 +13,9 @@ export class App extends Component {
   render() {
     return (
       <Container>
-        <FeedbackOptions />
+        <Section title="Please leave feedback">
+          <FeedbackOptions />
+        </Section>
       </Container>
     );
   }

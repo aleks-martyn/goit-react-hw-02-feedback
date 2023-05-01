@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { FeedbackOptions } from './FeedbackOptions';
+import { Container } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -8,6 +10,10 @@ export class App extends Component {
   };
 
   render() {
-    return <div></div>;
+    return (
+      <Container>
+        <FeedbackOptions />
+      </Container>
+    );
   }
 }

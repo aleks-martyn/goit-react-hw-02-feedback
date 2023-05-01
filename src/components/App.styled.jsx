@@ -8,5 +8,4 @@ export const Container = styled.div`
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
-  height: 400px;
 `;

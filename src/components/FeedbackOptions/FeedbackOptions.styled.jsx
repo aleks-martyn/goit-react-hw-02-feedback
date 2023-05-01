@@ -4,3 +4,8 @@ export const Wrap = styled.div`
   display: flex;
   gap: 10px;
 `;
+
+export const Button = styled.button`
+  width: 40px;
+  height: 20px;
+`;

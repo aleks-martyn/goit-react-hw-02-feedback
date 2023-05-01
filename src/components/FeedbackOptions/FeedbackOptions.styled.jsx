@@ -7,4 +7,5 @@ export const Wrap = styled.div`
 
 export const Button = styled.button`
   height: 20px;
+  font-weight: bold;
 `;

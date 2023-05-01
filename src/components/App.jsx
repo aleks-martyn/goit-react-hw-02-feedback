@@ -11,6 +11,8 @@ export class App extends Component {
     bad: 0,
   };
 
+  addGoodFeedback = () => {this.setState((state) => ({good: state.good + 1}))};
+
   render() {
     const { good, neutral, bad } = this.state;
     return (

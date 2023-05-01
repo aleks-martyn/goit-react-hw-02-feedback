@@ -1,20 +1,12 @@
 import PropTypes from 'prop-types';
+import { Wrap } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = () => {
   return (
-    <form>
-      <label>
-        <input type="radio" name="feedback" value="good" />
-        Good
-      </label>
-      <label>
-        <input type="radio" name="feedback" value="neutral" />
-        Neutral
-      </label>
-      <label>
-        <input type="radio" name="feedback" value="bad" />
-        Bad
-      </label>
-    </form>
+    <Wrap>
+      <button type='button'><span>Good</span></button>
+      <button type='button'><span>Neutral</span></button>
+      <button type='button'><span>Bad</span></button>
+    </Wrap>
   );
 };

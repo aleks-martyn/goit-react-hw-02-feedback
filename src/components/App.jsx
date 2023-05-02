@@ -11,14 +11,20 @@ export class App extends Component {
     bad: 0,
   };
 
-  addGoodFeedback = () => {this.setState((state) => ({good: state.good + 1}))};
+  handleLeaveFeedback = ([btn]) => {
+    this.setState(state => ({ [btn]: state[btn] + 1 }));
+  };
 
   render() {
     const { good, neutral, bad } = this.state;
+    const buttons = Object.keys(this.state);
     return (
       <Container>
         <Section title="Please leave feedback">
-          <FeedbackOptions />
+          <FeedbackOptions
+            options={buttons}
+            onLeaveFeedback={this.handleLeaveFeedback}
+          />
         </Section>
         <Section title="Statistics">
           <Statistics good={good} neutral={neutral} bad={bad} />

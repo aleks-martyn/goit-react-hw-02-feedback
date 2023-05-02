@@ -11,7 +11,7 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleLeaveFeedback = ([btn]) => {
+  handleLeaveFeedback = (btn) => {
     this.setState(state => ({ [btn]: state[btn] + 1 }));
   };
 

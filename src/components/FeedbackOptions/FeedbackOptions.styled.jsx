@@ -10,6 +10,7 @@ export const Button = styled.button`
   font-weight: bold;
   text-transform: capitalize;
   transition: transform 250ms linear;
+
   &:hover {
     transform: scale(1.1);
   }

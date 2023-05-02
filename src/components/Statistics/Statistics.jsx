@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { Text } from './Statistics.styled';
 
-export const Statistics = ({ good, neutral, bad }) => {
+export const Statistics = (props) => {
+  const { good, neutral, bad } = props;
+  const buttons = Object.keys(props);
+  
   return (
     <div>
-      <Text>Good: {good}</Text>
-      <Text>Neutral: {neutral}</Text>
-      <Text>Bad: {bad}</Text>
+      {buttons.map(btn => (<Text key={btn}>{btn}: {props[btn]}</Text>))}
     </div>
   );
 };
@@ -16,3 +17,4 @@ Statistics.propTypes = {
   neutral: PropTypes.number,
   bad: PropTypes.number,
 };
+

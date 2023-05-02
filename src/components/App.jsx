@@ -11,8 +11,14 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleLeaveFeedback = (btn) => {
+  handleLeaveFeedback = btn => {
     this.setState(state => ({ [btn]: state[btn] + 1 }));
+  };
+
+  countTotalFeedback = () => {
+  //  const values = Object.values(this.state);
+  //  let total = values.map(value => (total += value));
+  //  return total;
   };
 
   render() {
@@ -27,7 +33,12 @@ export class App extends Component {
           />
         </Section>
         <Section title="Statistics">
-          <Statistics good={good} neutral={neutral} bad={bad} />
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={this.countTotalFeedback()}
+          />
         </Section>
       </Container>
     );

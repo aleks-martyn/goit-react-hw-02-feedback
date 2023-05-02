@@ -16,9 +16,9 @@ export class App extends Component {
   };
 
   countTotalFeedback = () => {
-  //  const values = Object.values(this.state);
-  //  let total = values.map(value => (total += value));
-  //  return total;
+    return Object.values(this.state).reduce((acc, value) => {
+      return acc + value;
+    }, 0);
   };
 
   render() {

@@ -1,12 +1,18 @@
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Wrap, Button } from './FeedbackOptions.styled';
 
-export const FeedbackOptions = () => {
+export const FeedbackOptions = ({ options }) => {
   return (
     <Wrap>
-      <Button type='button'><span>Good</span></Button>
-      <Button type='button'><span>Neutral</span></Button>
-      <Button type='button'><span>Bad</span></Button>
+      {options.map(btn => (
+        <Button key={btn} type="button">
+          <span>{btn}</span>
+        </Button>
+      ))}
     </Wrap>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string),
 };

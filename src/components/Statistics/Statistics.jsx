@@ -18,9 +18,9 @@ export const Statistics = props => {
 Statistics.propTypes = {
   props: PropTypes.objectOf(
     PropTypes.shape({
-      goog: PropTypes.number,
+      good: PropTypes.number,
       neutral: PropTypes.number,
-      bad: PropTypes.bad,
+      bad: PropTypes.number,
       total: PropTypes.number,
       positivePercentage: PropTypes.number,
     })

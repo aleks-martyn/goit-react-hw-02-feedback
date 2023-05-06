@@ -3,9 +3,9 @@ import { Wrap, Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <Wrap>
-    {options.map(btn => (
-      <Button key={btn} type="button" onClick={() => onLeaveFeedback(btn)}>
-        <span>{btn}</span>
+    {options.map(option => (
+      <Button key={option} type="button" onClick={() => onLeaveFeedback(option)}>
+        <span>{option}</span>
       </Button>
     ))}
   </Wrap>

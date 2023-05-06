@@ -12,8 +12,8 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleLeaveFeedback = btn => {
-    this.setState(state => ({ [btn]: state[btn] + 1 }));
+  handleLeaveFeedback = label => {
+    this.setState(prevState => ({ [label]: prevState[label] + 1 }));
   };
 
   countTotalFeedback = () => {
